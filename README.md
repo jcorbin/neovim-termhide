@@ -4,7 +4,7 @@ Support For Hide-able [NeoVim `:terminal`][nvim_terminal_emulator] Buffers
 
 Status: **experimental**
 
-# Usage
+## Usage
 
 1. Start a new shell terminal `:Term` `:TermSplit` or `:TermVSplit` to split it with the current buffer
 2. Switch back to some other buffer, maybe closing the terminal window first, for example:
@@ -32,7 +32,7 @@ Otherwise the default `shell` is used (see `:help 'shell'`). Be careful when
 changing this, as it may break other plugins that make assumptions about the
 default `shell` on Windows or Unix.
 
-# Suggested Mappings
+## Suggested Mappings
 
 ```vimscript
 " Easy shell start-or-show
@@ -45,13 +45,21 @@ tnoremap <C-\><C-o> <C-\><C-n><C-o>
 tnoremap <C-\><C-c> <C-\><C-n><C-w>c
 ```
 
-# TODO
+## Install
+
+neovim-termhide follows the standard runtime path structure. Install with
+something like [vim-plug](https://github.com/junegunn/vim-plug):
+```
+Plug 'jcorbin/vim-lobster'
+```
+
+## TODO
 
 - a Quake-style fixed-height drop-down (or up from the bottom) mode
 - some deal to split by default (also X any fixed/quake modality); probably
   through a higher level entry point, like a `<plug>(term)` mapping
 
-# Related Questions and Issues
+## Related Questions and Issues
 
 - https://vi.stackexchange.com/questions/19276/how-to-keep-the-neovim-terminal-buffer-in-the-buffer-list-even-after-it-being-hi
 - https://vi.stackexchange.com/questions/19288/how-to-hide-terminal-buffer-without-closing-it
