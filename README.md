@@ -24,7 +24,7 @@ You may also specify a different shell to run as in:
 
 You may specify a different default shell in `$MYVIMRC` by setting `g:termhide_default_shell`:
 
-```vimscript
+```vim
 let g:termhide_default_shell = 'powershell.exe'
 ```
 
@@ -34,7 +34,7 @@ default `shell` on Windows or Unix.
 
 ## Suggested Mappings
 
-```vimscript
+```vim
 " Easy shell start-or-show
 nnoremap <leader>$ :Term<cr>
 
@@ -49,7 +49,7 @@ tnoremap <C-\><C-c> <C-\><C-n><C-w>c
 
 neovim-termhide follows the standard runtime path structure. Install with
 something like [vim-plug](https://github.com/junegunn/vim-plug):
-```
+```vim
 Plug 'jcorbin/vim-lobster'
 ```
 
