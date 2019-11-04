@@ -63,7 +63,7 @@ tnoremap <C-\><C-c> <C-\><C-n><C-w>c
 neovim-termhide follows the standard runtime path structure. Install with
 something like [vim-plug](https://github.com/junegunn/vim-plug):
 ```vim
-Plug 'jcorbin/vim-lobster'
+Plug 'jcorbin/neovim-termhide'
 ```
 
 ## TODO
