@@ -37,8 +37,8 @@ function! termhide#show_or_create(split, shell)
       let hud_size = 10
     endif
 
-    " topleft
-    botright split
+    " botright
+    topleft split
     exe 'resize ' .  hud_size
     setlocal wfh
   endif
