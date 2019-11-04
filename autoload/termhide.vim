@@ -30,6 +30,17 @@ function! termhide#show_or_create(split, shell)
     split
   elseif a:split == 2
     vsplit
+  elseif a:split == 3
+    if exists('g:termhide_hud_size')
+      let hud_size = g:termhide_hud_size
+    else
+      let hud_size = 10
+    endif
+
+    " topleft
+    botright split
+    exe 'resize ' .  hud_size
+    setlocal wfh
   endif
 
   " if buffer hidden, show it

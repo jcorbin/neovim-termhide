@@ -6,16 +6,20 @@ Status: **experimental**
 
 ## Usage
 
-1. Start a new shell terminal `:Term` `:TermSplit` or `:TermVSplit` to split it with the current buffer
+1. Start a new shell terminal `:Term`
 2. Switch back to some other buffer, maybe closing the terminal window first, for example:
    - `<C-\><C-n>` to return to normal mode
    - `<C-w>c` to close the terminal window
    - *NOTE* this does not kill the running terminal, it continues in the
      background, and can be seen in the buffer list
-3. Run any of `:Term` `:TermSplit` or `:TermVSplit` to show the running shell terminal once more
-   - *NOTE* if there is a window already showing the terminal, than these
-     commands focus it and enter insert mode instead of creating a new split,
-     or switching the current window to the existing buffer
+3. Return to the running shell terminal with `:Term`
+   - *NOTE* if there is a window already showing the terminal, than it is
+     focused in insert mode instead of switching the current window
+
+May use the `:TermSplit` or `:TermVSplit` commands to work in a split, instead
+of changing the current window. Similarly `:TermHUD` creates a fixed-height
+bottom window. Like `:Term` these commands focus any existing window if
+possible, rather than creating a new split window.
 
 You may also specify a different shell to run as in:
 - `:Term zsh`
@@ -55,9 +59,10 @@ Plug 'jcorbin/vim-lobster'
 
 ## TODO
 
-- a Quake-style fixed-height drop-down (or up from the bottom) mode
-- some deal to split by default (also X any fixed/quake modality); probably
-  through a higher level entry point, like a `<plug>(term)` mapping
+- improve the HUD mode
+- change default modality of the `:Term` command? or instead provide a a higher
+  level `<plug>(term)` entry point
+- floating window mode?
 
 ## Related Questions and Issues
 
