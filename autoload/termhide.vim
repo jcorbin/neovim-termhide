@@ -24,7 +24,9 @@ function! termhide#show_or_create(split, shell)
   " win_gotoid
 
   " no existing window, create a split if requested or necessary
-  if a:split == 1 || &modified
+  if a:split == 0 && &modified
+    split
+  elseif a:split == 1
     split
   elseif a:split == 2
     vsplit
