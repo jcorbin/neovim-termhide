@@ -38,14 +38,23 @@ default `shell` on Windows or Unix.
 
 ## Suggested Mappings
 
+Easy HUD toggle:
 ```vim
-" Easy shell start-or-show
-nnoremap <leader>$ :Term<cr>
+nnoremap <leader>` :TermHUD<cr>
+tnoremap <leader>` <C-\><C-n><C-w>c
+```
 
-" Quicker 'Go Back'
+Easily switch to a terminal:
+```vim
+nnoremap <leader>$ :Term<cr>
+```
+
+And easier exits from a terminal:
+```vim
+" Back to wherever we were before this terminal
 tnoremap <C-\><C-o> <C-\><C-n><C-o>
 
-" Quicker 'Close Window'
+" Close terminal window, e.g. when it was in a new split
 tnoremap <C-\><C-c> <C-\><C-n><C-w>c
 ```
 
