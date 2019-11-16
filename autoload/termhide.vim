@@ -54,3 +54,19 @@ function! termhide#show_or_create(split, shell)
   exe 'terminal ' . term_shell
   setlocal bufhidden=hide
 endfunction
+
+function! termhide#hud()
+  if exists(":Gstatus") != 2
+    return
+  endif
+
+  if exists('g:termhide_hud_size')
+    let hud_size = g:termhide_hud_size
+  else
+    let hud_size = 10
+  endif
+
+  botright Gstatus
+  exe 'resize ' .  hud_size
+  setlocal wfh
+endfunction

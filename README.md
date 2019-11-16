@@ -58,6 +58,11 @@ tnoremap <C-\><C-o> <C-\><C-n><C-o>
 tnoremap <C-\><C-c> <C-\><C-n><C-w>c
 ```
 
+## Fugitive Status HUD
+
+A `:Ghud` command is also provided to easily open fugitive's `:Gstatus` buffer
+in a fixed hud window at the bottom.
+
 ## Install
 
 neovim-termhide follows the standard runtime path structure. Install with
